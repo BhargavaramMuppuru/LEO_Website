@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+
+
+
+    <!-- custom styles -->
+
+<link rel="stylesheet" href='{% static "css/featurestyle.css" %}' type="text/css" /> 
+<link rel="stylesheet" href='{% static "css/style.css" %}' type="text/css">
+<link rel="stylesheet" href='{% static "css/contactus.css" %}' type="text/css">
+
+
+    <!-- JavaScript -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>     <script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script> <script type="text/javascript" src='{% static "/js/slider.jquery.js" %}'></script> <script src='{% static "/js/bootstrap.min.js" %}'></script>
+
+
+
+    <title>VIT LEO CLUB</title>
+<link rel="icon" type="image/png" href='{% static "images/Logo_white.png" %}' />
+
+{% endblock head %}
+
+{% block body %}
+
+<div style="background-color: #f8f8f8;margin-top: 1em;" id="contact" >
+    <section>
+        <!-- <div  class=" col-md-6"> -->
+
+        <h2 class="text-center" style="padding-top: 3em;">CONTACT US</h2>
+        {% if msg %}
+        <div class="alert">
+            <p>Thank you for contacting us!</p>
+
+            <p>
+                You are very important to us, and all information received will always remain confidential. We will
+                connect with you as soon as we review your message.
+            </p>
+        </div>
+        <div class="alert" style="display: none;">
+            <p><strong>Thank you for contacting us!</strong> </p>
+
+            <p>
+                You are very important to us, and all information received will always remain confidential. We will
+                connect with you as soon as we review your message.
+            </p>
+        </div>
+
+        {% else %}
+     
+        <form class="cf" id="contactForm" method="POST" action="{% url 'contact' %}" style="padding-bottom: 5em;">
+            {% csrf_token %}
+            <div class="half left cf">
+                <input type="text" id="input-name" placeholder="Name" name="name" required>
+                <input type="email" id="input-email" placeholder="Email address" name="email" required>
+                <input type="text" id="input-subject" placeholder="Phone Number" name="subject">
+            </div>
+            <div class="half right cf">
+                <textarea name="message" type="text" id="input-message" placeholder="Message" name="message"
+                    required></textarea>
+            </div>
+            <input type="submit" value="Submit" id="input-submit">
+        </form>
+    </div>
+
+        
+    </section>
+        {% endif %}
+
+{% endblock body %}

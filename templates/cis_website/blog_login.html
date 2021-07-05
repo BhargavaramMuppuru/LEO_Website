@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+   text-align: center;
+  border: 3px solid green;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+    </style>
+
+
+</head>
+<body>
+<div class="center">
+
+<form method="POST" action="/upload_blog">
+    {% csrf_token %}
+    <p><label>Username:</label> <input type="text" name="username" maxlength="100" required id="username"></p>
+<p><label>Password:</label> <input type="password" name="password" maxlength="100" required id="password"></p>
+    <input type="submit" value="Login">
+    {% if msg %}
+<h3 align="center">{{ msg }}</h3>
+{% endif %}
+</form>
+
+</div>
+
+</body>
+</html>
