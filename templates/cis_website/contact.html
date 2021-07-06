@@ -35,8 +35,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit
 {% endblock head %}
 
 {% block body %}
-
-<div style="background-color: #f8f8f8;margin-top: 1em;" id="contact" >
+<div style="background-color: #f8f8f8;margin-top: 4em;" id="contact" >
     <section>
         <!-- <div  class=" col-md-6"> -->
 
@@ -61,23 +60,24 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit
 
         {% else %}
      
-        <form class="cf" id="contactForm" method="POST" action="{% url 'contact' %}" style="padding-bottom: 5em;">
+        <form class="" id="contactForm" method="POST" action="{% url 'contact' %}" style="padding-bottom: 5em;">
             {% csrf_token %}
-            <div class="half left cf">
+            <div class="half left ">
                 <input type="text" id="input-name" placeholder="Name" name="name" required>
                 <input type="email" id="input-email" placeholder="Email address" name="email" required>
                 <input type="text" id="input-subject" placeholder="Phone Number" name="subject">
             </div>
-            <div class="half right cf">
+            <div class="half right ">
                 <textarea name="message" type="text" id="input-message" placeholder="Message" name="message"
                     required></textarea>
             </div>
             <input type="submit" value="Submit" id="input-submit">
         </form>
-    </div>
+    
 
         
     </section>
         {% endif %}
 
 {% endblock body %}
+</div>

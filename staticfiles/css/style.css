@@ -1315,14 +1315,14 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-  -moz-box-shadow: 0 0px 5px #1a3677 !important;
-  -webkit-box-shadow: 0 0px 5px #1a3677 !important;
-  box-shadow: 0 0px 5px #1a3677 !important;
+  -moz-box-shadow: 0 0px 5px #233B6E !important;
+  -webkit-box-shadow: 0 0px 5px #233B6E !important;
+  box-shadow: 0 0px 5px #233B6E !important;
 }
 
 form #input-submit {
   color: white;
-  background: linear-gradient(to right, #1a3677, #16a0d0);
+  background: linear-gradient(to right, #233B6E, #5373b3);
   cursor: pointer;
 }
 

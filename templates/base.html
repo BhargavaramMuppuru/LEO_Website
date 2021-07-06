@@ -11,87 +11,90 @@
 
 <header>
    <!-- Navbar -->
-   <section class="nav_section" id="nav">
-    <div class="nav-container">
-        <nav class="navbar  navbar-expand-lg navbar-light navbar-fixed-top"> 
-            <img src="/static/images/LOGO.png"  alt="logo" class="logo-image">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/home">Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/events">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/blog">Blogs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/boards">Boards</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact_us">Contact Us</a>
-                </li>
-            </ul>
-            </div>
+   <section >
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <a class="navbar-brand" href="/home"><img src="/static/images/logo.jpg" alt="LeoClub" class="img-fluid logo "></a>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto mb-0">
+        <div class="dropdown-divider"></div>
+        <li class="nav-item mx-auto">
+            <a class="nav-link mx-4" href="/home">Home<span class="sr-only"></span></a>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li class="nav-item mx-auto">
+        <a class="nav-link mx-4" href="/events">Events <span class="sr-only"></span></a>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li class="nav-item mx-auto">
+        <a class="nav-link mx-4" href="/blog">Blog<span class="sr-only"></span></a>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li class="nav-item mx-auto">
+        <a class="nav-link mx-4" href="/board">Our Team<span class="sr-only"></span></a>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li class="nav-item mx-auto">
+        <a class="nav-link mx-4" href="/contact_us">Contact Us<span class="sr-only"></span></a>
+        </li>
+        </ul>
+        </div>
+
+       
+        
         </nav>
-    </div>
+        </div>
 </section>
 <!-- Navbar ends -->
 </header>
 
 <style>
-  /* navigation bar */
-  .nav-container{
-        padding:0.5em 4em 0.5em 3em;
-        box-shadow: 0 4px 2px -2px rgba(0,0,0,0.5);
-    }
-    .nav_section{
-        background-color: #fff;
-        color: #233B6E;
-    }
-    .navbar{
-        padding: 0 0;
-    }
-    .navbar-brand{
-        font-size: 2rem;
-    }
-    .nav-item{
-        padding: 0 1em;
-    }
-    .navbar-toggler-icon{
-        color:#233B6E;
-    }
-    .nav-link{
-        font-size: 1.2em;
-        color:#233B6E;
-        font-weight: 800;
-        transition: 0.5s ease-in;
-        text-decoration: none;
-        border-top: 4px solid #fff;
-        border-bottom: 4px solid #fff;
-    }
-    .nav-link:hover{
-        border-bottom: 4px solid #233B6E;
-    }
-    .logo-image{
-        height: 80px;
-        width: 80px;
-        border-radius: 100%;
-    }
-    @media (max-width: 576px){
-        .navbar-brand{
-        font-size: 1.5rem;
-        }
-        .nav-link:hover,.nav-item,.nav-link{
-            color:#fff;
-            border-bottom: none !important;
-        }
-    }
-/* navigation bar ends*/
+ 
+/* Navbar Custom */
+.navbar {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: .5em;
+    padding-top: .5em;
+   
+}
+
+.navbar-custom {
+    background-color: white;
+}
+
+.navbar-custom a {
+    color: black;
+}
+
+.navbar-custom a:hover {
+    color: #000;
+    border-bottom: 3px solid #233B6E;
+}
+
+.logo {
+    width: 60px;
+}
+
+.navbar-custom a .active {
+    color: rgba(0, 0, 0, 0.747);
+    border-bottom: 1px solid black;
+}
+
+/* Navbar Toggler */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(2, 0, 0)' stroke-width='1' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    border: 1px solid rgb(2, 0, 0);
+    border-radius: 3px;
+    padding: 19px;
+}
+
+/* Navbar Outline */
+.navbar .navbar-toggler {
+    outline: none;
+}
 </style>
 
 
@@ -103,17 +106,17 @@
 
 
 
-<div class="footer" style="margin-bottom: -5em;">
+<div class="footer" style="margin-bottom: -5em; ">
    <div class="container">     
        <div class="row"  >                       
-           <div class="col-lg-4 col-sm-4 col-xs-12">
+           <div class="col-lg-6 col-sm-6 col-xs-12">
                <div class="single_footer">
-                   <img src="/static/images/Logo_white.png" width="50%">
+                   <img src="/static/images/Logo_white.png" width="30%" style="margin-top:-2em ;">
                    <h3>VIT LEO CLUB</h3>
                    
                </div>
            </div><!--- END COL --> 
-           <div class="col-md-4 col-sm-4 col-xs-12">
+           <!-- <div class="col-md-4 col-sm-4 col-xs-12">
                <div class="single_footer single_footer_address">
                 <h4>Explore</h4>
                 <ul>
@@ -124,10 +127,10 @@
                     <li><a href="#">Contact Us</a></li>
                 </ul>
                </div>
-           </div><!--- END COL -->
-           <div class="col-md-4 col-sm-4 col-xs-12">
+           </div>- END COL -->
+           <div class="col-md-6 col-sm-6 col-xs-12">
                <div class="single_footer single_footer_address">
-                   <h4>Follow Us </h4>
+                   <h4 class="follow" >Follow Us </h4>
                </div>
                <div class="social_profile">
                    <ul>
@@ -157,8 +160,8 @@
   
 .footer {
     background: linear-gradient(105deg,#5373b3 ,#233B6E);
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 70px;
+    padding-bottom: 30px;
 }
 /*END FOOTER SOCIAL DESIGN*/
 @media only screen and (max-width:768px) { 
@@ -175,7 +178,7 @@
 .single_footer h3 {
     color: #fff;
     margin-top: 0;
-    margin-left: 1em;
+    margin-left: 0.8em;
     margin-bottom: 25px;
     font-weight: 700;
     text-transform: uppercase;
@@ -188,6 +191,10 @@
     width: 40px;
     background: #fff;
     margin-top: 20px;
+}
+.follow{
+    margin-left: 3em;
+    margin-top: -3em;
 }
 .single_footer p{color:#fff;}
 .single_footer ul {
@@ -281,7 +288,7 @@ list-style: outside none none;
 margin: 0;
 padding: 0;
 }
-.social_profile ul li{float:left;}
+.social_profile ul li{float: left;}
 .social_profile ul li a {
     text-align: center;
     border: 0px;
@@ -315,8 +322,8 @@ border:0px;
 }
 /*END SOCIAL PROFILE CSS*/
 .copyright {
-    margin-top: 70px;
-    padding-top: 40px;
+    margin-top: 10px;
+    padding-top: 20px;
     color:#fff;
     font-size: 15px;
     border-top: 1px solid rgba(255,255,255,0.4);
