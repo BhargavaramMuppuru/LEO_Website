@@ -33,5 +33,322 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit
 {% endblock head %}
 
 {% block body %}
+    <!-- Offline Events -->
+<style>
+    /* Events Section */
 
+body>.events {
+    background: linear-gradient(to bottom,#27a2e4,#189be2,#0c75ad,#003d5e); 
+    margin:5% 8%;
+}
+
+.image {
+    display: block;
+    width: 80%;
+    height: 50vh;
+
+    object-fit: cover;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+}
+
+
+/* -----------------------------------------------
+ * Timeline
+ * --------------------------------------------- */
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    background: #C5CAE9;
+    width: 5px;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    float: right;
+    padding: 60px 30px 10px 30px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    padding: 60px 30px 10px 30px;
+}
+
+.timeline-item:nth-child(even) .timeline-content .date {
+    right: auto;
+    left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    left: -15px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #f5f5f5 transparent transparent;
+}
+
+.timeline-item::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background: #f5f5f5;
+    box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    right: -15px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #f5f5f5;
+}
+
+.timeline-img {
+    width: 30px;
+    height: 30px;
+    background: #0177B7;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+.timeline>a {
+    background: #0177B7;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.8);
+}
+
+.timeline>a:hover,
+a:active,
+a:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.timeline-card {
+    padding: 0 !important;
+}
+
+.timeline-card p {
+    padding: 0 20px;
+}
+
+.timeline-card a {
+    margin-left: 20px;
+}
+
+.timeline-item .timeline-img-header {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://picsum.photos/1000/800/?random") center center no-repeat;
+    background-size: cover;
+}
+
+.timeline-img-header {
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-img-header h2 {
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+
+.date {
+    background: #0177B1;
+    display: inline-block;
+    color: #FFFFFF;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::before {
+        left: 50px;
+    }
+
+    .timeline .timeline-img {
+        left: 50px;
+    }
+
+    .timeline .timeline-content {
+        max-width: 100%;
+        width: auto;
+        margin-left: 70px;
+    }
+
+    .timeline .timeline-item:nth-child(even) .timeline-content {
+        float: none;
+    }
+
+    .timeline .timeline-item:nth-child(odd) .timeline-content::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        width: 0;
+        height: 0;
+        top: 30px;
+        left: -15px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #f5f5f5 transparent transparent;
+    }
+
+    .timeline-content>h2 {
+        letter-spacing: 5px;
+    }
+}
+
+</style>
+ 
+
+  <!-- Online Events -->
+  <h2 id="event" style="text-align: center;margin-top: 80px;font-family: Verdana, Geneva, Tahoma, sans-serif;" class=" mb-5" data-aos="fade-up" data-aos-duration="1000"
+    data-aos-once="true" data-aos-once="true" data-aos-once="true"><br><br>Online Events<br></h2>
+  <section class="timeline">
+    <div class="container">
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">15 AUGUST 2021</div>
+          <h2>Dr. Konsam Himalay Singh</h2>
+          <p>Lt Gen (Dr) Konsam Himalay Singh, a former Lieutenant-General of the Indian Army and the first military officer from Manipur to reach the ranks of Brigadier and Major General . He is also the  author of "Making of a General”.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">31 JULY 2021</div>
+          <h2>Dr. Lajwanti Naidu</h2>
+          <p>Dr. Addala Lajwanti Naidu is a Ph.D. holder in travel and tourism and an IATA-certified instructor. She has done her research for six years, hosted many conferences, and was even awarded the ‘best paper' award during her research program.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">10 JUNE 2021</div>
+          <h2>Dr. Manjula Anagani</h2>
+          <p>Padma Shree awardee Padma Shree Dr. Manjula Anagani, a Gynaecologist, Obstetrician and a Lap Surgeon. She has forayed into the field of medicine, and forged ahead to achieve laurels in her field.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">11 APRIL 2021</div>
+          <h2>Sand Artist Sudhakanth</h2>
+          <p>Mr. Sudhakanth is a sand artist well known for his captivating and creative art form.He has a degree in fine arts and has been doing this for about a decade now. </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">31 DECEMBER 2020</div>
+          <h2>Babar Ali </h2>
+          <p>One of these selfless people is Babar Ali, the youngest headmaster in the world. 
+            Determined to share knowledge and seeing the hardships of his friends, his zeal brought education to West Bengal's poor. He believes that education should be made free and nothing can stand in the way of hardwork and perseverance.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content  " data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">10 OCTOBER 2020</div>
+          <h2>Sri. K. Virahath Ali</h2>
+          <p> Sri. K. Virahath Ali, A renowned social activist and journalist.He has been awarded with many awards including the UNICEF Award, and the Best Journalist Award.
+            He has dedicated his life for the betterment of the society and inspires us to do the same.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">23 SEPTEMBER 2020</div>
+          <h2>Dr. Melissa G. Wallang</h2>
+          <p> Associate Professor NCERT, Sign language specialist.She has done her M.Phil. in Linguistics from JNU. She has written a thesis on linguistics. She has also published a book named, “Sign Linguistics and Language Education for the Deaf: An Overview of North-East Region”.</p>
+      </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content " data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">26 AUGUST 2020</div>
+          <h2>Pratik Gandhi </h2>
+          <p>Mr. Pratik Gandhi, an engineer turned into Gujarati movie actor, who  decided to stand out of the crowd and show the world his agreement to disagree. He was included in the Limca Book of Records with his play Mohan's Masala; a monologue performed in three languages, English, Hindi and Gujarati on the same day.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content " data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">30 JULY 2020</div>
+          <h2>Dr. K.V Satyanarayana</h2>
+          <p>IAS Officer (Rtd),Dr K.V. Satyanarayana, who has won International recognition for outstanding work in micro irrigation in Andra Pradesh. He is currently the CEO of Global Forum for Sustainable Transformation. He has also won two Nandi Awards for telefilms on water conservation and women empowerment.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">10 JULY 2020</div>
+          <h2>Srijan Pal Singh</h2>
+          <p>Author, CEO Dr APJ Kalam centre.An Indian author with great views and opinions for the country today.He believes in revolution, speaks for the society and voices out his thoughts through potent words.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">04 JULY 2020</div>
+          <h2>Faridoon Shahryar </h2>
+          <p>An enthusiastic and famous journalist with an Excellence in Landmark journalism award winner currently working for Bollywood Hungama who is known for his famous interviews.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content " data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">26 MAY 2020</div>
+          <h2>Abhishek Singh</h2>
+          <p> 2011 batch IAS officer currently posted as the deputy commissioner of Delhi to enhance our knowledge on civil service examinations and the services we can provide towards our country.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        <div class="timeline-content " data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+          <div class="date">13 MAY 2020</div>
+          <h2>Gaurav Bidhuri</h2>
+          <p>World boxing champion.He is the first indian boxer with two WSB contracts. He played for Italy 2015 and USA 2016. He is here to inspire all of us towards achieving our goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock body %}
