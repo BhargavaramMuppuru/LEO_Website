@@ -28,10 +28,115 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit
 
 
     <title>VIT LEO CLUB</title>
-<link rel="icon" type="image/png" href='{% static "images/logo.png.png" %}' />
+<link rel="icon" type="image/png" href='{% static "images/logo.jpg" %}' />
 
 {% endblock head %}
 
 {% block body %}
+<style>
+  
+/* Section Header Image */
+.header-img {
+    padding-top: 30vh;
+    margin-top: -0vh;
+    /* The image used */
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("static/images/home.jpg");
+     
 
+    /* Add the blur effect */
+
+
+    /* Full height */
+    height: 100vh;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    /*background-color: rgb(0,0,0); /* Fallback color */
+    /*background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh !important;
+    /* border: 3px solid #f1f1f1;*/
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .bg-text>h1 {
+        margin-left: 30% !important;
+        font-size: 3vh;
+    }
+}
+.about{
+  margin: 5% auto;
+}
+</style>
+<!---Background--->
+<div class="header-img img-fluid ">
+    <br>
+    <div class=" bg-text landing-text">
+      <h5>We stand today united in a belief in beauty, genius and courage and that these can transform the world</h5>
+      <h1 style="font-size: 25px !important; margin-left: 250px;">~ Jane Addams</h1>
+      <p></p>
+    </div>
+  </div>
+  <!--End Background-->
+  <!-- Main Content -->
+  <section id="main-about">
+    <div class="container about p-5">
+      <div class="row justify-content-left">
+        <h2 class="font-weight-bold mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"
+          data-aos-once="true" data-aos-once="true">About us</h2>
+      </div>
+      <div class=" justify-content-left">
+        <h6 class="row font-weight-bold mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">What does
+          LEO stand for?</h6>
+        <p class="special-text" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">L - Leadership;</p>
+        <p class="special-text" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">E - Experience;</p>
+        <p class="special-text" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">O - Opportunity</p>
+      </div>
+      <div class="row justify-content-left">
+        <h6 class="font-weight-bold mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">What is our
+          mission?</h6>
+      </div>
+      <div class=" justify-content-left">
+        <p class="special-text" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+          Our main purpose is to serve all the underprivileged citizens of our nation. We aim to help the young
+          generation to pave their path to a bright future, while on the other hand, we try to improve the living
+          conditions of the elderly. We aim to bring a smile on as many faces as we can. We strive to be a helping hand
+          to our community with our kindness and service.
+        </p>
+      </div>
+      <div class="row justify-content-left">
+        <h6 class="font-weight-bold mt-3" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">What is the
+          history of LEO Club?</h6>
+      </div>
+      <div class=" justify-content-left">
+        <p class="special-text" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+          LEO Clubs are those organizations which are made of the youth of Lions Clubs International. They are very well
+          known all across the world. The first LEO Club was formed in Pennsylvania, USA. The LEO Clubs have grown and
+          developed into a strong dynamic force. Thus, here we are over 50 years later, helping the society as part of
+          VIT LEO Club, in a small city in Tamil Nadu. There are around 7,200 LEO Clubs with over 130,000 members in
+          more than 150 Countries. The success of LEO Clubs is a crucial part of the success of Lions Clubs
+          International.
+        </p>
+      </div>
+    </div>
+  </section>
 {% endblock body %}
