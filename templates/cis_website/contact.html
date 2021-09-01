@@ -35,11 +35,16 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit
 {% endblock head %}
 
 {% block body %}
-<div style="background-color: #f8f8f8;margin-top: 4em;" id="contact" >
+<style>
+    .con{
+        box-shadow: 1px 1px 5px rgb(148, 148, 148);
+    }
+</style>
+<div style="background-color: #f8f8f8;margin-top: 1em;" id="contact" >
     <section>
         <!-- <div  class=" col-md-6"> -->
 
-        <h2 class="text-center" style="padding-top: 3em;">CONTACT US</h2>
+        <h2 class="text-center" style="padding-top: 3em;font-family:Verdana, Geneva, Tahoma, sans-serif; margin-top: 60px;">Contact Us</h2>
         {% if msg %}
         <div class="alert">
             <p>Thank you for contacting us!</p>
@@ -60,24 +65,23 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit
 
         {% else %}
      
-        <form class="" id="contactForm" method="POST" action="{% url 'contact' %}" style="padding-bottom: 5em;">
+        <form class="cf" id="contactForm" method="POST" action="{% url 'contact' %}" style="padding-bottom: 5em;">
             {% csrf_token %}
-            <div class="half left ">
-                <input type="text" id="input-name" placeholder="Name" name="name" required>
-                <input type="email" id="input-email" placeholder="Email address" name="email" required>
-                <input type="text" id="input-subject" placeholder="Phone Number" name="subject">
+            <div class="half left cf">
+                <input class="con" type="text" id="input-name" placeholder="Name" name="name" required>
+                <input class="con"type="email" id="input-email" placeholder="Email address" name="email" required>
+                <input class="con"type="text" id="input-subject" placeholder="Phone Number" name="subject">
             </div>
-            <div class="half right ">
-                <textarea name="message" type="text" id="input-message" placeholder="Message" name="message"
+            <div class="half right cf">
+                <textarea class="con" name="message" type="text" id="input-message" placeholder="Message" name="message"
                     required></textarea>
             </div>
             <input type="submit" value="Submit" id="input-submit">
         </form>
-    
+    </div>
 
         
     </section>
         {% endif %}
 
 {% endblock body %}
-</div>
