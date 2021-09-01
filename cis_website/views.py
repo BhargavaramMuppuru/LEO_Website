@@ -11,8 +11,11 @@ def index(request):
 def home(request):
     response = render(request, 'cis_website/home.html')
     return response
-def about(request):
+def events(request):
     return render(request, 'cis_website/events.html')
+def board(request):
+    return render(request, 'cis_website/boards.html')
+    
 def blog(request):
     blog_database = blog_data.objects.all()
     return render(request, 'cis_website/blog.html', {'data': blog_database[::-1]})
