@@ -1,1 +1,1 @@
-web: gunicorn LEO_Website.wsgi
+web: gunicorn CIS.wsgi
